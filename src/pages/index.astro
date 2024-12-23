@@ -12,38 +12,44 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+		<main class="container mx-auto px-4">
+			<div class="hero text-center py-16">
+				<h1 class="text-4xl font-bold mb-4">🎲 Welcome to the Board Game Club!</h1>
+				<p class="text-xl mb-8">
+					Join us for exciting game nights, make new friends, and discover amazing board games!
+				</p>
+			</div>
+
+			<section class="features grid md:grid-cols-3 gap-8 py-12">
+				<div class="feature-card text-center p-6 border rounded-lg">
+					<h2 class="text-2xl font-bold mb-4">🗓️ Weekly Meetups</h2>
+					<p>Join us every Thursday at 7 PM for our regular game nights. From strategy to party games, there's something for everyone!</p>
+				</div>
+				<div class="feature-card text-center p-6 border rounded-lg">
+					<h2 class="text-2xl font-bold mb-4">🏆 Tournaments</h2>
+					<p>Participate in our monthly tournaments and compete for prizes. Show off your skills in various game categories!</p>
+				</div>
+				<div class="feature-card text-center p-6 border rounded-lg">
+					<h2 class="text-2xl font-bold mb-4">📚 Game Library</h2>
+					<p>Access our extensive collection of 200+ board games. Members can even borrow games for home play!</p>
+				</div>
+			</section>
+
+			<section class="upcoming-events bg-gray-100 p-8 rounded-lg my-12">
+				<h2 class="text-3xl font-bold mb-6">📅 Upcoming Events</h2>
+				<ul class="space-y-4">
+					<li class="flex items-center gap-4">
+						<span class="font-bold">March 30th:</span> Catan Tournament
+					</li>
+					<li class="flex items-center gap-4">
+						<span class="font-bold">April 5th:</span> Newcomers Welcome Night
+					</li>
+					<li class="flex items-center gap-4">
+						<span class="font-bold">April 12th:</span> Strategy Games Workshop
+					</li>
+				</ul>
+			</section>
+
 		</main>
 		<Footer />
 	</body>

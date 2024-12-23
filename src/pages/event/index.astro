@@ -35,19 +35,22 @@ const posts = (await getCollection('blog')).sort(
 				transition: 0.2s ease;
 			}
 			ul li:first-child {
-				width: 100%;
+				width: calc(50% - 1rem);
 				margin-bottom: 1rem;
 				text-align: center;
 			}
 			ul li:first-child img {
-				width: 100%;
+				width: auto;
 			}
 			ul li:first-child .title {
-				font-size: 2.369rem;
+				font-size: 1.5rem;
 			}
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
+				width: 512px;
+				height: 1024px;
+				object-fit: cover;
 			}
 			ul li a {
 				display: block;
@@ -93,8 +96,8 @@ const posts = (await getCollection('blog')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<a href={`/blog/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+								<a href={`/event/${post.id}/`}>
+									<img width={512} height={1024} src={post.data.heroImage} alt="" />
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
